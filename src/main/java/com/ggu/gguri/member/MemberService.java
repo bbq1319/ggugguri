@@ -7,6 +7,8 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ggu.common.ServerCode;
+
 @SuppressWarnings({ "rawtypes", "unchecked" })
 @Service("memberSvc")
 public class MemberService {
@@ -16,11 +18,18 @@ public class MemberService {
 	public Map getMemberList(Map paramMap) {
 		HashMap<String, Object> resMap = new HashMap<String, Object>();
 		resMap.put("memberList", memberMapper.getMemberList(paramMap));
-		
-		System.out.println("Service start");
-		System.out.println(resMap);
-		System.out.println("Service end");
-		
+		return resMap;
+	}
+	
+	public Map doLogin(Map paramMap) {
+		HashMap resMap = new HashMap();
+		HashMap loginInfo = memberMapper.getLoginInfo(paramMap);
+		if(loginInfo != null) {
+			resMap.put("loginInfo", loginInfo);
+			resMap.put("RESULT_CODE", ServerCode.RESULT_SUCCESS);
+		}
+		else 
+			resMap.put("RESULT_CODE", ServerCode.RESULT_ERROR);
 		return resMap;
 	}
 }

@@ -7,5 +7,11 @@
 		/* getMemberList */
 		select * from member
 	</select>
+	
+	<select id="getLoginInfo" parameterType="hashmap" resultType="hashmap">
+		/* getLoginInfo */
+		select id from member
+		where id = #{user_id} and password = #{user_password}
+	</select>
 
 </mapper>

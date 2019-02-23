@@ -8,38 +8,50 @@
 	</head>
 
 	<body>
-		<h1>
-			Hello world!  
-		</h1>
+		<%@ include file="/WEB-INF/views/common/header.jsp"%>
+	
+		<div>
+			<!-- 주간 BEST -->
+			<div id="best">
+			</div>
+			
+			<!--  -->
+			<div id="recent">
+			</div>		
+			
+			<!-- 공지사항 -->
+			<div id="notice">
+				<p>공지사항</p>
+			</div>
+		</div>
 		
-		<P>  The time on the server is ${serverTime}. </P>
-		<div id="test">실패</div>
 	</body>
 
 	<script>
-		/* 
-		$.ajax({  
-		    type : "POST",  
-		    url : "/member/getMemberList.json",  
-		    dataType : "json",  
-		    success : function(data){ 
-		    	alert("성공");
-		    	
-		    	var html = "<div>성공이란다</div>";
-		        $("#id").append(html);     
-		    },  
-		    error:function(xhr,status,error){ //ajax 오류인경우  
-		        console.log("error\nxhr : " + xhr + ", status : " + status + ", error : " + error);                 
-		    }  
-		});  
-		 */
-		 
 		var param = {
-			url: "/member/getMemberList.json" 
+			url: "/board/getFreeBoardList.json",
+			data: {
+				start: 0,
+				limit: 4
+			}
 		};
 		
 		$.fnUtil.ajax(param, function(obj) {
-			console.log(obj);
+			var html_best = "<p>주간 BEST</p>";
+			obj.data.freeBoardBest.forEach(function(value, arr) {
+				html_best += 
+					'<p>' + (arr+1) + ' ' + value.TITLE + '</p>'					
+			});
+			$("#best").empty();		
+			$("#best").prepend(html_best);
+			
+			var html_recent = "<p>최신글</p>";
+			obj.data.freeBoardRecent.forEach(function(value, arr) {
+				html_recent += 
+					'<p>' + (arr+1) + ' ' + value.TITLE + '</p>'
+			});
+			$("#recent").empty();		
+			$("#recent").prepend(html_recent);
 		}) 
 	</script>
 </html>

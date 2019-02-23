@@ -1,6 +1,9 @@
 package com.ggu.gguri.member;
 
+import java.util.HashMap;
 import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,9 +24,35 @@ public class MemberController {
 	public ModelAndView getMemberList(@RequestParam Map paramMap) {
 		JsonResultMap resMap = new JsonResultMap();
 		resMap.addObject("data", memberSvc.getMemberList(paramMap));
+		return resMap;
+	}
+	
+	@RequestMapping("/member/login")
+	public String login(@RequestParam Map paramMap) {
+		return "auth/login";
+	}
+	
+	@RequestMapping("/member/logout")
+	public String logout(@RequestParam Map paramMap, HttpServletRequest request) throws Exception {
+		request.getSession().invalidate();
+		return "redirect:/home";
+	}
+	
+	@RequestMapping("/member/regist")
+	public String regist(@RequestParam Map paramMap) {
+		return "auth/regist";
+	}
+	
+	@RequestMapping("/member/doLogin.json")
+	public ModelAndView doLogin(@RequestParam Map paramMap, HttpServletRequest request) {
+		JsonResultMap resMap = new JsonResultMap();
+		paramMap.put("user_id", paramMap.get("id"));
+		paramMap.put("user_password", paramMap.get("password"));
 		
-		System.out.println(resMap);
-		
+		HashMap map = (HashMap) memberSvc.doLogin(paramMap);
+		if(map.containsKey("loginInfo"))
+			request.getSession().setAttribute("loginInfo", map.get("loginInfo"));
+		resMap.addObject("data", map);
 		return resMap;
 	}
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ggu.gguri.board.BoardMapper">
+
+	<select id="getFreeBoardList" parameterType="hashmap" resultType="hashmap">
+		/* getFreeBoardList */
+		select * from board_free
+		<choose>
+			<when test="type.equals('best')">
+				order by vote desc
+			</when>
+			<otherwise>
+				order by regdate desc
+			</otherwise>
+		</choose>
+		limit ${start}, ${limit}
+	</select>
+	
+</mapper>

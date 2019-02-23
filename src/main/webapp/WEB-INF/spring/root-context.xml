@@ -5,12 +5,22 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<!-- MySQL -->
-	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<bean id="dataSourceSpied" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" 	value="com.mysql.jdbc.Driver"/>
 		<property name="url" 				value="jdbc:mysql://183.111.199.179:3306/ggugguri?serverTimezone=UTC"/>
 		<property name="username" 			value="ggugguri"/>
 		<property name="password" 			value="java2019!"/>
 	</bean>
+	
+	<bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
+        <constructor-arg ref="dataSourceSpied" />
+        <property name="logFormatter">
+            <bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
+                <property name="loggingType" value="MULTI_LINE" />
+                <property name="sqlPrefix" value="SQL         :  "/>
+            </bean>
+        </property>
+    </bean>
 	
  	<!-- Mybatis Mapper Interface 와 xml 을 검색하여 매핑시켜주는 역활 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
