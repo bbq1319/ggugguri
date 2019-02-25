@@ -12,7 +12,6 @@
 <c:set var="contextPath" value="<%=contextPath %>"></c:set>
 
 <!-- 로그인한 사용자 ID -->
-<div>s<c:out value="${sessionScope}" /></div>
 <c:set var="user_id" value="${sessionScope.loginInfo.id}" />
 
 <!-- 공통 에러코드 -->
@@ -28,3 +27,13 @@
 <!-- JS -->
 <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="/js/function.core.js?ver=1"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- ICON -->
+<link rel="shortcut icon" href="/img/favicon.png">
+<link rel="icon" href="/img/favicon.png">
+
+<!-- FONT -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
