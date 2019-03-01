@@ -10,7 +10,11 @@
 	<div class="wrap">
 		<%@ include file="/WEB-INF/views/common/header.jsp"%>
 
-		
+		<div class="container">
+			<div class="board">
+				<h1>꾸르맛집</h1>
+			</div>
+		</div>
 		
 		<%@ include file="/WEB-INF/views/common/footer.jsp"%>
 	</div>

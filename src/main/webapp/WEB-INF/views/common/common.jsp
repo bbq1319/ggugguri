@@ -24,10 +24,6 @@
 <c:set var="result_server_error" value="${ServerCode.RESULT_SERVER_ERROR }" />
 <c:set var="is_real" value="${ServerCode.IS_REAL }" />
 
-<!-- JS -->
-<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="/js/function.core.js?ver=1"></script>
-
 <!-- CSS -->
 <link rel="stylesheet" href="/css/style.css">
 
@@ -37,3 +33,7 @@
 
 <!-- FONT -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+
+<!-- JS -->
+<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/js/function.core.js?ver=1"></script>

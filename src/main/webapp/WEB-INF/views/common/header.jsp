@@ -34,7 +34,7 @@
 					<div class="window">
 						<input id="query" type="text" title="검색어입력" class="input_text">
 						<button class="searchIcon">
-							<img src="img/search.png" height="20px" width="20px">
+							<img src="/img/search.png" height="20px" width="20px">
 						</button>
 					</div>
 				</form>
@@ -45,64 +45,64 @@
 			<div class="column">
 				<h3>GGUM</h3>
 				<div class="list">
-					<a href="#">GGUM 소개</a>
+					<a href="/board/ggum/intro">GGUM 소개</a>
 				</div>
 				<div class="list">
-					<a href="#">운영진 소개</a>
+					<a href="/board/ggum/team_info">운영진 소개</a>
 				</div>
 				<div class="list">
-					<a href="#">공지사항</a>
+					<a href="/board/ggum/notice">공지사항</a>
 				</div>
 			</div>
 			<div class="column">
 				<h3>커뮤니티</h3>
 				<div class="list">
-					<a href="#">자유게시판</a>
+					<a href="/board/community/free">자유게시판</a>
 				</div>
 				<div class="list">
-					<a href="#">익명게시판</a>
+					<a href="/board/community/anonymous">익명게시판</a>
 				</div>
 			</div>
 			<div class="column">
 				<h3>금강IN</h3>
 				<div class="list">
-					<a href="#">스터디모집</a>
+					<a href="/board/ggu_in/study">스터디모집</a>
 				</div>
 				<div class="list">
-					<a href="#">동아리모집</a>
+					<a href="/board/ggu_in/circle">동아리모집</a>
 				</div>
 				<div class="list">
-					<a href="#">취업/진로</a>
+					<a href="/board/ggu_in/career">취업/진로</a>
 				</div>
 				<div class="list">
-					<a href="#">강의평가</a>
+					<a href="/board/ggu_in/lecture">강의평가</a>
 				</div>
 			</div>
 			<div class="column">
 				<h3>편의</h3>
 				<div class="list">
-					<a href="#">HOT맛집</a>
+					<a href="/board/convenience/restaurant">HOT맛집</a>
 				</div>
 				<div class="list">
-					<a href="#">제휴업체</a>
+					<a href="/board/convenience/alliance">제휴업체</a>
 				</div>
 				<div class="list">
-					<a href="#">버스</a>
+					<a href="/board/convenience/bus">버스</a>
 				</div>
 				<div class="list">
-					<a href="#">택시</a>
+					<a href="/board/convenience/taxi">택시</a>
 				</div>
 				<div class="list">
-					<a href="#">벼룩시장</a>
+					<a href="/board/convenience/flea_market">벼룩시장</a>
 				</div>
 			</div>
 			<div class="column lastColumn">
 				<h3>GGU민원센터</h3>
 				<div class="list">
-					<a href="#">건의사항</a>
+					<a href="/board/complaint/suggestion">건의사항</a>
 				</div>
 				<div class="list">
-					<a href="#">문의사항</a>
+					<a href="/board/complaint/qna">문의사항</a>
 				</div>
 			</div>
 		</div>

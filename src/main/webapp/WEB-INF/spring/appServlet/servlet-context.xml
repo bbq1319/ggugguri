@@ -20,6 +20,7 @@
 	<mvc:resources mapping="/img/**" location="/img/"/>
 	<mvc:resources mapping="/js/**" location="/js/"/>
 	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<mvc:resources mapping="/WEB-INF/views/common/**" location="/WEB-INF/views/common/"/>
 
 	<beans:bean id="jacksonMessageConverter" 
             class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>

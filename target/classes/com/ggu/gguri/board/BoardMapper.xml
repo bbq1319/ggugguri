@@ -5,6 +5,9 @@
 
 	<select id="getFreeBoardList" parameterType="hashmap" resultType="hashmap">
 		/* getFreeBoardList */
+		<if test="all_cnt != null">
+			select count(*) as cnt from(
+		</if>
 		select * from board_free
 		<choose>
 			<when test="type.equals('best')">
@@ -14,7 +17,15 @@
 				order by regdate desc
 			</otherwise>
 		</choose>
-		limit ${start}, ${limit}
+		
+		<choose>
+			<when test="all_cnt != null">
+				) a
+			</when>
+			<otherwise>
+				limit ${start}, ${limit}
+			</otherwise>
+		</choose>
 	</select>
 	
 </mapper>

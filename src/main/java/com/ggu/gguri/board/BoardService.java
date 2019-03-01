@@ -18,6 +18,8 @@ public class BoardService {
 		resMap.put("freeBoardBest", boardMapper.getFreeBoardList(paramMap));
 		paramMap.put("type", "recent");
 		resMap.put("freeBoardRecent", boardMapper.getFreeBoardList(paramMap));
+		paramMap.put("all_cnt", 1);
+		resMap.put("freeBoardRecentCnt", boardMapper.getFreeBoardList(paramMap).get(0));
 		
 		return resMap;
 	}

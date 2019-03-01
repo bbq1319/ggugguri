@@ -9,7 +9,8 @@
 
 	<body>
 		<form id="fm">
-			아이디 : <input type="text" name="id" placeholder="4글자 이상으로 입력해주세요"><br>
+			아이디 : <input type="text" name="id" placeholder="4글자 이상으로 입력해주세요">
+					<input type="button" value="중복체크" onclick="check_id()"><br>
 			비밀번호 : <input type="password" name="password" placeholder="4글자 이상으로 입력해주세요"><br>
 			비밀번호 확인 : <input type="password" name="password_check" placeholder="4글자 이상으로 입력해주세요"><br>
 			닉네임 : <input type="text" name="nick" placeholder="4글자 이상으로 입력해주세요">
@@ -25,6 +26,8 @@
 	</body>
 
 	<script>
-		
+		function check_id() {
+			
+		}
 	</script>
 </html>
