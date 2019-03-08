@@ -14,4 +14,20 @@
 		where id = #{user_id} and password = #{user_password}
 	</select>
 
+	<select id="addMember" parameterType="hashmap">
+		/* addMember *.
+		insert into member set
+			id = #{id},
+			password = #{password},
+			nicknm = #{nicknm},
+			name = #{name},
+			birth = #{birth},
+			email = #{email},
+			major = #{major},
+			<if test="major2 != null">
+				major2 = #{major2},
+			</if>
+			stuno = #{stuno}
+	</select>
+
 </mapper>

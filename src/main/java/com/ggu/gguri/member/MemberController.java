@@ -55,4 +55,11 @@ public class MemberController {
 		resMap.addObject("data", map);
 		return resMap;
 	}
+	
+	@RequestMapping("/member/addMember.json")
+	public ModelAndView addMember(@RequestParam Map paramMap, HttpServletRequest request) {
+		JsonResultMap resMap = new JsonResultMap();
+		resMap.addObject("data", memberSvc.addMember(paramMap));
+		return resMap;
+	}
 }

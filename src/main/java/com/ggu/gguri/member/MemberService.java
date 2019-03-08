@@ -32,4 +32,14 @@ public class MemberService {
 			resMap.put("RESULT_CODE", ServerCode.RESULT_ERROR);
 		return resMap;
 	}
+	
+	public Map addMember(Map paramMap) {
+		HashMap resMap = new HashMap();
+		if(memberMapper.addMember(paramMap) > 0) {
+			resMap.put("RESULT_CODE", ServerCode.RESULT_SUCCESS);
+		}
+		else 
+			resMap.put("RESULT_CODE", ServerCode.RESULT_ERROR);
+		return resMap;
+	}
 }

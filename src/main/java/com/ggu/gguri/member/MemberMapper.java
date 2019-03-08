@@ -12,4 +12,6 @@ public interface MemberMapper {
 	public List getMemberList(Map paramMap);
 	
 	public HashMap getLoginInfo(Map paramMap);
+	
+	public int addMember(Map paramMap);
 }
