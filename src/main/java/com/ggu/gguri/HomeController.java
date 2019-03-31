@@ -36,4 +36,8 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping(value = "/lotto", method = RequestMethod.GET)
+	public String lotto(Locale locale, Model model) {
+		return "lotto";
+	}
 }

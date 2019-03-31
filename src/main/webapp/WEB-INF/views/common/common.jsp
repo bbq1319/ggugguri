@@ -24,8 +24,15 @@
 <c:set var="result_server_error" value="${ServerCode.RESULT_SERVER_ERROR }" />
 <c:set var="is_real" value="${ServerCode.IS_REAL }" />
 
+<!-- JS -->
+<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/js/function.core.js?ver=20190331"></script>
+
 <!-- CSS -->
 <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/base_mobile.css?ver=20190331">
+<link rel="stylesheet" href="/css/base_semi.css?ver=20190331">
+<link rel="stylesheet" href="/css/base_web.css?ver=20190331">
 
 <!-- ICON -->
 <link rel="shortcut icon" href="/img/favicon.png">
@@ -34,6 +41,3 @@
 <!-- FONT -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
 
-<!-- JS -->
-<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="/js/function.core.js?ver=1"></script>

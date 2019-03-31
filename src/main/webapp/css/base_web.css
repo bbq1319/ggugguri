@@ -1,0 +1,273 @@
+/* Global */
+a, span, p , body, h1, h2, h3{
+  font-family: "Noto Sans Korean", "Apple SD Gothic Neo", "Nanum Barun Gothic", "Malgun Gothic", "돋옴", Dotum, sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.header{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  margin-bottom: 1%;
+  width: 1080px;
+}
+
+.header_grid_container{
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+
+.header_grid_container > div{
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.search_box{
+  border: solid 2px black;
+  position: relative;
+  height: 90%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.searchIcon{
+  border-style: none;
+  background-color: transparent;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right:1%;
+}
+
+.input_text{
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  color:#000;
+  font-weight: 700;
+  font-size:14px;
+  line-height: 23px;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  width:90%;
+  left:3%;
+}
+
+.navbar{
+  border-top:solid 1px #ddd;
+  border-bottom:solid 1px #ddd;
+}
+
+.navbar_grid_container{
+  width: 1080px;
+  margin:0 auto;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  font-size: 10px;
+}
+
+.middle{
+  background-color: #f7f7f7;
+}
+
+.wrap{
+  width:1080px;
+  margin:0 auto 40px auto;
+}
+
+.middle_grid_container{
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  grid-template-rows: 150px 250px 104px 300px;
+  grid-row-gap: 25px;
+  grid-column-gap: 15px;
+}
+
+
+.navbar_bottom {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display:grid;
+  grid-template-columns:20% 20% 20% 18% 22%;
+}
+
+.navbar_bottom div{
+  background-color: #fff;
+}
+
+.navbar_bottom h3{
+  margin-left:5px;
+}
+
+.login_wrap{
+  background-color: #f7f7f7 !important;
+  padding: 5px 5px 5px 20px;
+}
+
+.login_box{
+  font-size: 10px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  padding: 5px 20px 0 20px;
+}
+
+.login_box h4{
+  color:#adabab;
+}
+
+.login_box button{
+  width:90%;
+  border:none;
+  background-color: rgb(254,223,36);
+  color: rgb(51,35,21);
+  height:100%;
+}
+
+.login_find{
+  float:left;
+}
+
+.login_join{
+  float:right;
+}
+
+.login_button{
+  text-align: center;
+  height: 60%;
+  width: 100%;
+  margin-top:10%;
+}
+
+.login_box_bottom{
+  display: absolute;
+}
+
+.navbar_bottom h3{
+  font-size: 15px;
+  font-weight: 800;
+
+}
+
+.board_main{
+  background-color: #fff;
+  height: 100%;
+  margin: 0 auto;
+  width:88%;
+  padding:10px 20px 0 20px;
+}
+
+.board_main > div{
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.board_main h3{
+  padding:0 0 5px 0;
+  margin:0;
+}
+
+.board_top{
+  overflow: hidden;
+  border-bottom: solid 1px #dbdbdb;
+}
+
+.board_top a{
+  display: block;
+  overflow: hidden;
+}
+
+.board_detail{
+  display:flex;
+}
+
+
+.banner_main{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.album{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  width: 100%;
+  background-color: #fff;
+}
+
+.album_top{
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-column-gap: 10px;
+  padding: 10px 10px 0px 10px;
+  border-bottom: solid 1px #dbdbdb;
+}
+
+.album_top h2{
+  font-size: 23px;
+  padding:0;
+  margin:0;
+}
+
+
+.album_top > div{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.album_bottom{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  height: 80%;
+}
+
+.album_bottom div{
+
+}
+
+.album_bottom_contents{
+  padding: 5px 5px 0 5px;
+  border: 1px solid black;
+  height: 100%;
+  margin:0 auto;
+}
+
+.album_bottom_contents h4{
+  margin:2px 0 0 0;
+}
+
+.album_bottom_contents h5{
+  margin:2px 0 0 0;
+  color:#a3a3a3;
+}
+
+
+.board_contents div{
+  margin-top:10px;
+}
+
+.footer{
+  border-top:solid 1px #ddd;
+  background-color: #fff;
+  height: 10%;
+}
+
+.footer_wrap{
+  width: 1080px;
+  margin:5% auto;
+  text-align: center;
+}
+
+.footer_link{
+  margin-right:auto;
+  margin-left:auto;
+  width:70%;
+}
+
+.footer_link div{
+  text-align: center;
+  width:100%;
+}

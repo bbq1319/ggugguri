@@ -34,7 +34,7 @@
 							<h3>공지사항</h3>
 							<div class="contentsWrap">
 								<div class="content" id="notice">
-									<a href="#">Lorem Ipusm is Simply</a>
+									<a href="/lotto">로또프로그램</a>
 									<a href="#">Lorem Ipusm is Simply</a>
 									<a href="#">Lorem Ipusm is Simply</a>
 									<a href="#">Lorem Ipusm is Simply</a>

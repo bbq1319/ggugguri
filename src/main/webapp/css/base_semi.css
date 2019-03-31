@@ -1,0 +1,8 @@
+/* Global */
+a, span, p , body, h1, h2, h3{
+  font-family: "Noto Sans Korean", "Apple SD Gothic Neo", "Nanum Barun Gothic", "Malgun Gothic", "돋옴", Dotum, sans-serif;
+}
+
+h1{
+  background-color: yellow;
+}
